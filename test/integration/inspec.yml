@@ -1,0 +1,15 @@
+---
+name: default
+title: TFE network load balancer module tests
+summary: Test suite for basic check of the resources created in AWS created by the TFE Network Load Balancer module.
+version: 0.1.0
+
+inputs:
+- name: lb_dns_name
+  type: String
+- name: lb_tg_80_arn
+  type: String
+- name: lb_tg_443_arn
+  type: String
+- name: lb_tg_8800_arn
+  type: String
