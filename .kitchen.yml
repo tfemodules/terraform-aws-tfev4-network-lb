@@ -19,8 +19,15 @@ suites:
     verifier:
       color: true
       systems:
-        - name: aws
+        - name: local
           backend: local
           controls:
-            - testOutput
-            - testAWSResources
+            - targetGroupsARNs
+            - loadBalancerDNS
+        - name: aws
+          backend: aws
+          controls:
+            - alb
+            - tgPort80hc
+            - tgPort443hc
+            - tgPort8800hc

@@ -1,0 +1,26 @@
+---
+name: default
+title: Verify Module Outputs and Created Resources.
+summary: Performs basic checks on module outputs to confirm their value is the type that is expected.
+version: 0.1.0
+depends:
+  - name: inspec-aws
+    url: https://github.com/inspec/inspec-aws/archive/v1.31.0.tar.gz
+
+inputs:
+- name: lb_dns_name
+  type: String
+- name: lb_arn
+  type: String
+- name: lb_tg_80_arn
+  type: String
+- name: lb_tg_443_arn
+  type: String
+- name: lb_tg_8800_arn
+  type: String
+- name: lb_tg_80_full
+  type: Hash
+- name: lb_tg_443_full
+  type: Hash
+- name: lb_tg_8800_full
+  type: Hash

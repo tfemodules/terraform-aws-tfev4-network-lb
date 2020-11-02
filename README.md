@@ -33,6 +33,7 @@ The outputs declared by the module are in the table below.
 | Output | Type | Description |
 |--------|------|-------------|
 | lb_dns_name | `string` | DNS name of the created load balancer. |
+| lb_arn | `string` | The ARN of the created load balancer. |
 | lb_tg_80_arn | `string` | ARN (id) of the load balancer target group assigned to the listner on port 80. |
 | lb_tg_443_arn | `string` | ARN (id) of the load balancer target group assigned to the listner on port 443. |
 | lb_tg_8800_arn | `string` | ARN (id) of the load balancer target group assigned to the listner on port 8800. |

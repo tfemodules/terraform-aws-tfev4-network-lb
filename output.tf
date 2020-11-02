@@ -3,6 +3,11 @@ output "lb_dns_name" {
   description = "DNS name of the created load balancer."
 }
 
+output "lb_arn" {
+  value       = aws_lb.tfe.arn
+  description = "The ARN of the created load balancer."
+}
+
 output "lb_tg_80_arn" {
   value       = aws_lb_target_group.port_80.arn
   description = "ARN (id) of the load balancer target group assigned to the listner on port 80."
