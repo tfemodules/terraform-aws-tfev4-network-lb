@@ -19,8 +19,8 @@ suites:
     verifier:
       color: true
       systems:
-        - name: aws
+        - name: local
           backend: local
           controls:
-            - testOutput
-            - testAWSResources
+            - targetGroupsARNs
+            - loadBalancerDNS

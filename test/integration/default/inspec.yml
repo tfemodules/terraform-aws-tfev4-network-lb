@@ -1,7 +1,7 @@
 ---
 name: default
-title: TFE network load balancer module tests
-summary: Test suite for basic check of the resources created in AWS created by the TFE Network Load Balancer module.
+title: Verify Module Outputs and Created Resources.
+summary: Performs basic checks on module outputs to confirm their value is the type that is expected.
 version: 0.1.0
 
 inputs:
