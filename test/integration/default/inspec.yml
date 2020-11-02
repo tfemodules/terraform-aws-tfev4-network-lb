@@ -18,3 +18,9 @@ inputs:
   type: String
 - name: lb_tg_8800_arn
   type: String
+- name: lb_tg_80_full
+  type: Hash
+- name: lb_tg_443_full
+  type: Hash
+- name: lb_tg_8800_full
+  type: Hash

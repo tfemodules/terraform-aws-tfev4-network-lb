@@ -28,3 +28,6 @@ suites:
           backend: aws
           controls:
             - alb
+            - tgPort80hc
+            - tgPort443hc
+            - tgPort8800hc
