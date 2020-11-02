@@ -24,3 +24,7 @@ suites:
           controls:
             - targetGroupsARNs
             - loadBalancerDNS
+        - name: aws
+          backend: aws
+          controls:
+            - alb
