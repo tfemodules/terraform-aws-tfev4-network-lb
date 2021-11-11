@@ -14,14 +14,20 @@ variable "lb_internal" {
   default     = false
 }
 
+variable "enable_port_8800" {
+  type        = bool
+  description = "Whether to create a listner and a target group for port 8800."
+  default     = true
+}
+
 variable "name_prefix" {
   type        = string
   description = "A string to be used as prefix for generating names of the created resources."
   validation {
-    condition = length(var.name_prefix) <= 24
+    condition     = length(var.name_prefix) <= 24
     error_message = "Value for variable name_prefix cannot be a string of more than 24 characters."
   }
-  default     = "tfe-"
+  default = "tfe-"
 }
 
 variable "common_tags" {
