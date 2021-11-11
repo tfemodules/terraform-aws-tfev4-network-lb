@@ -11,6 +11,12 @@ variable "public_subnet_cidrs" {
   description = "List of objects reprisenting the public subnets CIDRs and their availability zones. The az_index property is used as an index to retireve a zone from the list of the availability zones for the current AWS region."
 }
 
+variable "enable_port_8800" {
+  type        = bool
+  description = "Whether to create a listner and a target group for port 8800."
+  default     = true
+}
+
 variable "lb_internal" {
   type        = bool
   description = "Whether to create internal load balancer."
