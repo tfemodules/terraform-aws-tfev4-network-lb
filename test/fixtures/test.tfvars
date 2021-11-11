@@ -13,4 +13,5 @@ name_prefix = "test-tfe-network-lb-"
 common_tags = {
   project = "kitchen-test-tfe-network-lb"
 }
-lb_internal = false
+lb_internal      = false
+enable_port_8800 = true

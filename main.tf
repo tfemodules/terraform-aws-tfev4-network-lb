@@ -28,12 +28,13 @@ resource "aws_lb_listener" "port_443" {
 }
 
 resource "aws_lb_listener" "port_8800" {
+  count             = var.enable_port_8800 ? 1 : 0
   load_balancer_arn = aws_lb.tfe.arn
   port              = 8800
   protocol          = "TCP"
   default_action {
     type             = "forward"
-    target_group_arn = aws_lb_target_group.port_8800.arn
+    target_group_arn = aws_lb_target_group.port_8800[0].arn
   }
 }
 
@@ -74,6 +75,7 @@ resource "aws_lb_target_group" "port_443" {
 }
 
 resource "aws_lb_target_group" "port_8800" {
+  count    = var.enable_port_8800 ? 1 : 0
   name     = "${var.name_prefix}port-8800"
   port     = 8800
   protocol = "TCP"

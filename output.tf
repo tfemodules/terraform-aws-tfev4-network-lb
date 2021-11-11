@@ -19,6 +19,6 @@ output "lb_tg_443_arn" {
 }
 
 output "lb_tg_8800_arn" {
-  value       = aws_lb_target_group.port_8800.arn
+  value       = var.enable_port_8800 ? aws_lb_target_group.port_8800[0].arn : ""
   description = "ARN (id) of the load balancer target group assigned to the listner on port 8800."
 }

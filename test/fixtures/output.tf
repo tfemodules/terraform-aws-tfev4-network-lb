@@ -35,6 +35,6 @@ output "lb_tg_443_full" {
 }
 
 output "lb_tg_8800_full" {
-  value       = data.aws_lb_target_group.lb_tg_8800
+  value       = try(data.aws_lb_target_group.lb_tg_8800[0], "")
   description = "The full Target Group object for TG on port 8800."
 }
